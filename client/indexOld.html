@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=336, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GameJam1</title>
+    <!--LIBS-->
+    <script type="text/javascript" src="libs/socketio.js" ></script>
+    <script type="text/javascript" src="libs/jquery.js" ></script>
+    <script type="text/javascript" src="libs/velocity.js" ></script>
+    <!--GAME-->
+    <script type="text/javascript" src="main.js"></script>
+    <style type="text/css">
+        body {
+            height: 1080px;
+        }
+        #main-container {
+            width: 100%;
+            height: 100%;
+            margin:0;
+            padding:0;
+            position:relative;
+            background: url('clock.png') no-repeat;
+        }
+        #pointer {
+            position: absolute;
+            width: 20px;
+            height: 100%;
+            top: 0px;
+            left: 50%;
+            margin-left: -10px;
+        }
+        #pointer-inside {
+            width: 100%;
+            height: 10%;
+            top: 40%;
+            background-color: #000;
+            position: absolute;
+            left: 0px;
+        }
+
+        #pointer2 {
+            position: absolute;
+            width: 10px;
+            height: 100%;
+            top: 0px;
+            left: 50%;
+            margin-left: -5px;
+        }
+        #pointer-inside2 {
+            width: 100%;
+            height: 20%;
+            top: 30%;
+            background-color: #000;
+            position: absolute;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="music_spped_demon">
+        <source src="audio/speed_demon_short.mp3" type="audio/mpeg">
+    </audio>
+    <div id="main-container" style="width:100%;height:100%;margin:0;padding:0;position:relative;">
+        <!--<img src="background.png" style="position:absolute;" />-->
+        <div id="player1" style="width:85px; height:85px; position: absolute;">
+            <img src="red.png" style="width:100%;">
+        </div>
+        <div id="player2" style="width:85px; height:85px; position: absolute;">
+            <img src="blue.png" style="width:100%;">
+        </div>
+        <div id="pointer">
+            <div id="pointer-inside"></div>
+        </div>
+        <div id="pointer2">
+            <div id="pointer-inside2"></div>
+        </div>
+    </div>
+    <div id="player1-to-find" style="background: lightcoral; width:380px; height:64px; top: 442px; left:44px; position: absolute"></div>
+    <div id="player1-score" style="background: lightcoral; width:380px; height:500px; top: 556px; left:44px; position: absolute"></div>
+
+    <div id="player2-to-find" style="background: lightblue; width:380px; height:64px; top: 442px; left:1516px; position: absolute"></div>
+    <div id="player2-score" style="background: lightblue; width:380px; height:500px; top: 556px; left:1516px; position: absolute"></div>
+
+    <div id="timeout-container" style="position:absolute; width:100%; height:100%; top: 0; left:0; background:black; color: white;">
+        <img src="logo.png" style="width:1920px; height:1080px; top:0"/>
+        <h1>Start in 3</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=336, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GameJam1</title>
+    <!--LIBS-->
+    <script type="text/javascript" src="libs/socketio.js" ></script>
+    <script type="text/javascript" src="libs/jquery.js" ></script>
+    <script type="text/javascript" src="libs/velocity.js" ></script>
+    <!--GAME-->
+    <script type="text/javascript" src="main2.js"></script>
+    <script type="text/javascript" src="binds.js"></script>
+</head>
+<body>
+    <form>
+        <label for="user-name-input">Set name: <input id="user-name-input"/></label>
+        <button id="set-name-button">SET NAME</button>
+    </form>
+    <button id="sit-on-position-1" data-position="1">SIT POSITION 1</button>
+    <button id="stand-up-from-position-1" data-position="1">STAND UP POSITION 1</button>
+    <button id="sit-on-position-2" data-position="2">SIT POSITION 2</button>
+    <button id="stand-up-from-position-2" data-position="2">STAND UP POSITION 2</button>
+    <div id="logs-container">
+
+    </div>
+</body>
+</html>
